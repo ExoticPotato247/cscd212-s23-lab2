@@ -1,7 +1,7 @@
 import java.util.Objects;
 
 public class Television {
-    private final boolean fourK;
+    private final boolean fourK = false;
     private final String make;
     private final String model;
     private final int resolution;
