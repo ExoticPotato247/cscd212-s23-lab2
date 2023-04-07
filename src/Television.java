@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Television {
     private final boolean fourK;
     private final String make;
@@ -36,5 +38,28 @@ public class Television {
 
     public int getScreenSize() {
         return screenSize;
+    }
+
+    @Override
+    public String toString() {
+        return "Television{" +
+                "make='" + make + '\'' +
+                ", model='" + model + '\'' +
+                ", resolution=" + resolution +
+                ", screenSize=" + screenSize +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null) return false;
+        if (!(o instanceof Television that)) return false;
+        return fourK == that.fourK && resolution == that.resolution && screenSize == that.screenSize && smart == that.smart && Objects.equals(make, that.make) && Objects.equals(model, that.model);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(fourK, make, model, resolution, screenSize, smart);
     }
 }
