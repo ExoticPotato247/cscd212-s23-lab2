@@ -148,7 +148,7 @@ class TATelevisionTest {
             Television television = new Television("tests", "tests", true, 36, 1080);
             Throwable exception = assertThrows(IllegalArgumentException.class, () -> {
                 television.compareTo(null);
-            }, "Missing throw IllegalArgumentException for null Television (compareTo)");
+            }, "Missing throw IllegalArgumentException for null cscd212classes.lab2.Television (compareTo)");
             assertEquals("null parameter in the compareTo method", exception.getMessage(),
                     "exception message does not match");
         }
